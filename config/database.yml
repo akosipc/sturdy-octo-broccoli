@@ -1,0 +1,21 @@
+
+default: &default
+  host: localhost
+  adapter: postgresql
+  username: realm
+  password: utongnimacmac
+  timeout: 5000
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: sample_app_development
+
+test:
+  <<: *default
+  database: sample_app_test
+
+production:
+  <<: *default
+  database: sample_app_production
+
