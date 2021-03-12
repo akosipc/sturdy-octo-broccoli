@@ -3,4 +3,7 @@ class Post < ApplicationRecord
   validates :description, length: { minimum: 10 }
 
   has_many :comments
+
+  def announcement
+  end
 end
