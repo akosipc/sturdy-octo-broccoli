@@ -1,0 +1,24 @@
+<%= form_with model: @post do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= error_message_for(f, :title) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+    <%= error_message_for(f, :description) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :published do %>
+      <%= f.check_box :published %>
+      Published
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Save" %>
+  </div>
+<% end %>

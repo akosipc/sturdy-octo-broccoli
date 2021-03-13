@@ -1,7 +1,41 @@
+<h1>
+  Posts
+</h1>
 
-<h1> Hello </h1>
-<h2> This is an index file </h2>
+<table>
+  <thead>
+    <tr>
+      <th> Title </th>
+      <th> Small Content </th>
+      <th> Published </th>
+      <th> Actions </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td> 
+          <%= link_to post_path(post) do %>
+            <%= post.title %> 
+          <% end %>
+        </td>
+        <td> <%= post.description.truncate(50) %> </td>
+        <td> <%= post.published %> </td>
 
-<p>
-Tao po
-</p>
+        <td>
+          <%= link_to edit_post_path(post) do %>
+            Edit
+          <% end %>
+          |
+          <%= link_to post_path(post), method: :delete, data: { confirm: "Are you sure?" } do %>
+            Delete
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to new_post_path do %>
+  New Post
+<% end %>

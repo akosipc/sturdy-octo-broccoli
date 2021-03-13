@@ -4,6 +4,5 @@ class Post < ApplicationRecord
 
   has_many :comments
 
-  def announcement
-  end
+  belongs_to :user
 end
