@@ -50,6 +50,7 @@ group :test do
   gem 'capybara'
   gem 'factory_bot_rails'
   gem 'shoulda-matchers'
+  gem 'selenium-webdriver'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
