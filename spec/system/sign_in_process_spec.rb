@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Sign in process', type: :feature do
-  let(:user) { create :user }
+  let!(:user) { create :user }
 
   it 'should log me in with I input valid user details' do
     visit new_user_session_path

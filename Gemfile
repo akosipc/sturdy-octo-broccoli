@@ -46,11 +46,11 @@ end
 
 group :test do
   gem 'rspec-rails'
-  gem 'database_rewinder'
   gem 'capybara'
   gem 'factory_bot_rails'
   gem 'shoulda-matchers'
   gem 'selenium-webdriver'
+  gem 'database_cleaner'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
